@@ -46,7 +46,7 @@ filters.forEach((filter) => {
       item.setAttribute('aria-pressed', String(active));
     });
     galleryCards.forEach((card) => {
-      const visible = selected === 'all' || card.dataset.category === selected;
+      const visible = selected === 'all' || card.dataset.category.split(/\s+/).includes(selected);
       card.classList.toggle('is-filtered', !visible);
     });
   });
@@ -93,6 +93,16 @@ const enquiryForm = document.querySelector('[data-enquiry-form]');
 const formNote = document.querySelector('[data-form-note]');
 const submitButton = enquiryForm.querySelector('.submit-button');
 const submitButtonLabel = submitButton.querySelector('span');
+const packageSelect = enquiryForm.querySelector('#package');
+
+document.querySelectorAll('[data-package]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    packageSelect.value = link.dataset.package;
+    document.querySelector('#contact').scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
+    window.setTimeout(() => packageSelect.focus(), reducedMotion ? 0 : 550);
+  });
+});
 
 enquiryForm.addEventListener('submit', async (event) => {
   event.preventDefault();

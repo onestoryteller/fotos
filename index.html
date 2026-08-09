@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://onestoryteller.co.uk/">
   <link rel="preload" href="london-skyline.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=20260809-2">
+  <link rel="stylesheet" href="styles.css?v=20260809-3">
   <title>One Storyteller — Photography shaped by London &amp; Cádiz</title>
   <script type="application/ld+json">
     {
@@ -48,7 +48,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
       <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
+      <a href="#services">Pricing</a>
       <a class="nav-enquire" href="#contact">Enquire</a>
     </nav>
   </header>
@@ -93,24 +93,44 @@
           <p class="eyebrow">Selected work</p>
           <h2 id="work-title">People. Place.<br><em>Everything between.</em></h2>
         </div>
-        <p>A living collection of street stories, celebrations and quiet connections across London and Cádiz.</p>
+        <p>A living collection of contextual portraits, couples, celebrations and street stories across London and Cádiz.</p>
       </div>
 
       <div class="filters reveal" role="group" aria-label="Filter photographs">
         <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All stories</button>
+        <button class="filter" type="button" data-filter="portraits" aria-pressed="false">Portraits</button>
+        <button class="filter" type="button" data-filter="couples" aria-pressed="false">Couples</button>
+        <button class="filter" type="button" data-filter="weddings" aria-pressed="false">Weddings</button>
+        <button class="filter" type="button" data-filter="events" aria-pressed="false">Events</button>
         <button class="filter" type="button" data-filter="street" aria-pressed="false">Street</button>
-        <button class="filter" type="button" data-filter="people" aria-pressed="false">People</button>
-        <button class="filter" type="button" data-filter="gatherings" aria-pressed="false">Gatherings</button>
       </div>
 
       <div class="gallery" data-gallery>
+        <figure class="gallery-card gallery-card--wide reveal" data-category="weddings events" data-caption="The first steps into the celebration — Cádiz">
+          <button type="button" aria-label="Open photograph: Just married">
+            <img src="wedding-joy.webp" alt="A newly married couple laughing as they leave their ceremony" width="2200" height="1143" loading="lazy">
+            <span><b>Just married</b><small>Cádiz · Wedding</small></span>
+          </button>
+        </figure>
+        <figure class="gallery-card gallery-card--portrait reveal" data-category="couples portraits" data-caption="A promise at sunset — Cádiz">
+          <button type="button" aria-label="Open photograph: Sunset promise">
+            <img src="cadiz-couple-sunset.webp" alt="A couple kissing on a Cádiz beach at sunset" width="1467" height="2200" loading="lazy">
+            <span><b>Sunset promise</b><small>Cádiz · Couples</small></span>
+          </button>
+        </figure>
+        <figure class="gallery-card reveal" data-category="couples portraits" data-caption="A family of three on a London afternoon">
+          <button type="button" aria-label="Open photograph: Together in the park">
+            <img src="couple-dog-park.webp" alt="A smiling couple posing with their dog in a London park" width="2200" height="1468" loading="lazy">
+            <span><b>Together in the park</b><small>London · Couples</small></span>
+          </button>
+        </figure>
         <figure class="gallery-card gallery-card--wide reveal" data-category="street" data-caption="A pause in the city — London">
           <button type="button" aria-label="Open photograph: A pause in the city">
             <img src="city-pause.webp" alt="A man sitting beside a reflective city building" width="2000" height="1335" loading="lazy">
             <span><b>City pause</b><small>London · Street</small></span>
           </button>
         </figure>
-        <figure class="gallery-card gallery-card--portrait reveal" data-category="people" data-caption="The leap — Cádiz">
+        <figure class="gallery-card gallery-card--portrait reveal" data-category="portraits" data-caption="The leap — Cádiz">
           <button type="button" aria-label="Open photograph: The leap">
             <img src="sea-dive.webp" alt="A swimmer diving into blue sea from a rock" width="1335" height="2000" loading="lazy">
             <span><b>The leap</b><small>Cádiz · People</small></span>
@@ -122,7 +142,7 @@
             <span><b>Passing notes</b><small>London · Street</small></span>
           </button>
         </figure>
-        <figure class="gallery-card reveal" data-category="gatherings" data-caption="Summer finds its own rhythm">
+        <figure class="gallery-card reveal" data-category="portraits events" data-caption="Summer finds its own rhythm">
           <button type="button" aria-label="Open photograph: Summer fountain">
             <img src="summer-fountain.webp" alt="Children playing behind a curtain of fountain water" width="2000" height="1335" loading="lazy">
             <span><b>Summer rhythm</b><small>Gatherings</small></span>
@@ -134,25 +154,25 @@
             <span><b>The audience</b><small>London · Street</small></span>
           </button>
         </figure>
-        <figure class="gallery-card gallery-card--wide reveal" data-category="people" data-caption="Together at the edge of the day">
+        <figure class="gallery-card gallery-card--wide reveal" data-category="portraits" data-caption="Together at the edge of the day">
           <button type="button" aria-label="Open photograph: Golden family">
             <img src="golden-family.webp" alt="A parent and child embracing in a sunlit field" width="2000" height="1154" loading="lazy">
             <span><b>Held in light</b><small>People · Family</small></span>
           </button>
         </figure>
-        <figure class="gallery-card reveal" data-category="street" data-caption="Hands at work — London">
+        <figure class="gallery-card reveal" data-category="street portraits" data-caption="Hands at work — London">
           <button type="button" aria-label="Open photograph: Craftsman">
             <img src="craftsman.webp" alt="A leather craftsman concentrating at a market stall" width="2000" height="1335" loading="lazy">
             <span><b>Made by hand</b><small>London · Street</small></span>
           </button>
         </figure>
-        <figure class="gallery-card reveal" data-category="people" data-caption="A family afternoon by the sea — Cádiz">
+        <figure class="gallery-card reveal" data-category="portraits" data-caption="A family afternoon by the sea — Cádiz">
           <button type="button" aria-label="Open photograph: Family by the sea">
             <img src="family-by-sea.webp" alt="A smiling family walking on the beach" width="2000" height="1271" loading="lazy">
             <span><b>Sea air</b><small>Cádiz · Family</small></span>
           </button>
         </figure>
-        <figure class="gallery-card gallery-card--portrait reveal" data-category="gatherings" data-caption="The whole room listens">
+        <figure class="gallery-card gallery-card--portrait reveal" data-category="events" data-caption="The whole room listens">
           <button type="button" aria-label="Open photograph: Orchestra">
             <img src="orchestra.webp" alt="A conductor leading an orchestra in black and white" width="2000" height="1049" loading="lazy">
             <span><b>In concert</b><small>Gatherings · Culture</small></span>
@@ -164,13 +184,13 @@
             <span><b>Market hour</b><small>London · Street</small></span>
           </button>
         </figure>
-        <figure class="gallery-card reveal" data-category="people" data-caption="Childhood, held for a second">
+        <figure class="gallery-card reveal" data-category="portraits" data-caption="Childhood, held for a second">
           <button type="button" aria-label="Open photograph: Childhood sun">
             <img src="childhood-sun.webp" alt="A child smiling under a beach parasol" width="2000" height="1335" loading="lazy">
             <span><b>Make believe</b><small>People · Childhood</small></span>
           </button>
         </figure>
-        <figure class="gallery-card gallery-card--portrait reveal" data-category="gatherings" data-caption="Community in full colour">
+        <figure class="gallery-card gallery-card--portrait reveal" data-category="events" data-caption="Community in full colour">
           <button type="button" aria-label="Open photograph: Community celebration">
             <img src="community.webp" alt="A joyful community gathered in colourful dress" width="1335" height="2000" loading="lazy">
             <span><b>Belonging</b><small>Gatherings · Community</small></span>
@@ -193,8 +213,11 @@
 
     <section class="about section-pad" id="about" aria-labelledby="about-title">
       <div class="about__image reveal">
-        <img src="cadiz-beach.webp" alt="A local vendor walking on a bright Cádiz beach" width="2000" height="1080" loading="lazy">
-        <p><span>Where the eye began</span><span>Cádiz, Spain</span></p>
+        <div class="about__portrait">
+          <img src="about-miguel.webp" alt="Miguel Ángel López Prieto photographing with his Nikon camera" width="1468" height="2200" loading="lazy">
+          <img class="about__origin" src="cadiz-beach.webp" alt="A local vendor walking on a bright Cádiz beach" width="2000" height="1080" loading="lazy">
+        </div>
+        <p><span>Miguel Ángel López Prieto</span><span>London · Cádiz</span></p>
       </div>
       <div class="about__copy reveal">
         <p class="eyebrow">Behind the camera</p>
@@ -204,7 +227,7 @@
         <p>My approach is calm, curious and people-first. I offer enough direction to help you feel at ease, then leave space for the unexpected. That is often where the truest photographs are found.</p>
         <div class="credential">
           <img src="nyip-credential.jpg" alt="New York Institute of Photography" width="440" height="232" loading="lazy">
-          <p><strong>Formally trained</strong><span>New York Institute of Photography</span></p>
+          <p><strong>Formally trained</strong><span>New York Institute of Photography · A Grade</span></p>
         </div>
       </div>
     </section>
@@ -212,28 +235,21 @@
     <section class="services section-pad" id="services" aria-labelledby="services-title">
       <div class="section-heading reveal">
         <div>
-          <p class="eyebrow">Ways to work together</p>
-          <h2 id="services-title">Your story,<br><em>told honestly.</em></h2>
+          <p class="eyebrow">Launch experiences &amp; pricing</p>
+          <h2 id="services-title">Clear choices.<br><em>No awkward surprises.</em></h2>
         </div>
-        <p>Thoughtful photography for real people and purposeful businesses, in London, Cádiz and wherever your story takes us.</p>
+        <p>Thoughtful photography for real people and purposeful businesses. These are introductory London prices while One Storyteller builds its local client community.</p>
       </div>
-      <div class="service-list">
-        <article class="service reveal">
-          <span>01</span>
-          <div><h3>People &amp; families</h3><p>Relaxed portraits, couples and family sessions with movement, warmth and no forced smiles.</p></div>
-          <b aria-hidden="true">↗</b>
-        </article>
-        <article class="service reveal">
-          <span>02</span>
-          <div><h3>Events &amp; gatherings</h3><p>Atmosphere, connection and the fleeting details that bring the occasion back to life.</p></div>
-          <b aria-hidden="true">↗</b>
-        </article>
-        <article class="service reveal">
-          <span>03</span>
-          <div><h3>Brands &amp; editorial</h3><p>Human-centred visual stories for independent brands, makers, hospitality and publications.</p></div>
-          <b aria-hidden="true">↗</b>
-        </article>
+      <div class="package-grid">
+        <article class="package reveal"><span class="package__number">01</span><p class="package__price">£125</p><h3>Portrait Essential</h3><p>30 minutes · one London location · 5 carefully edited images.</p><a href="#contact" data-package="Portrait Essential">Request a date <b aria-hidden="true">↗</b></a></article>
+        <article class="package package--featured reveal"><span class="package__tag">Signature</span><span class="package__number">02</span><p class="package__price">£225</p><h3>Contextual Portrait</h3><p>75 minutes · one or two nearby locations · 15 carefully edited images.</p><a href="#contact" data-package="Contextual Portrait">Request a date <b aria-hidden="true">↗</b></a></article>
+        <article class="package reveal"><span class="package__number">03</span><p class="package__price">£275</p><h3>London Story</h3><p>90-minute couples walk · 20 carefully edited images · private gallery.</p><a href="#contact" data-package="London Story">Request a date <b aria-hidden="true">↗</b></a></article>
+        <article class="package reveal"><span class="package__number">04</span><p class="package__price">from £395</p><h3>Personal Brand Story</h3><p>Up to 2 hours · planning call · 25 images for web and organic social.</p><a href="#contact" data-package="Personal Brand Story">Request a quote <b aria-hidden="true">↗</b></a></article>
+        <article class="package reveal"><span class="package__number">05</span><p class="package__price">from £495</p><h3>Civil Ceremony</h3><p>Up to 2 hours · ceremony, portraits and atmosphere · 100+ images.</p><a href="#contact" data-package="Civil Ceremony">Request a date <b aria-hidden="true">↗</b></a></article>
+        <article class="package reveal"><span class="package__number">06</span><p class="package__price">from £895</p><h3>Half-Day Wedding</h3><p>Up to 4 hours · planning call · 250+ images in a private gallery.</p><a href="#contact" data-package="Half-Day Wedding">Request a date <b aria-hidden="true">↗</b></a></article>
       </div>
+      <div class="pricing-guide reveal"><div><p class="eyebrow">Keep the details</p><h3>Photography experience &amp; pricing guide</h3><p>Five concise pages covering the approach, inclusions, booking and delivery.</p></div><a href="one-storyteller-pricing-guide.pdf" target="_blank" rel="noopener">Open PDF guide <b aria-hidden="true">↗</b></a></div>
+      <p class="pricing-note">Prices are starting prices and subject to date, location and final brief. Travel beyond central London and paid advertising licences are quoted separately.</p>
     </section>
 
     <section class="process section-pad" aria-labelledby="process-title">
@@ -241,8 +257,8 @@
       <h2 class="reveal" id="process-title">Easy from hello<br><em>to final gallery.</em></h2>
       <ol>
         <li class="reveal"><span>01</span><div><h3>Tell me the story</h3><p>Share what you are planning, who it is for and how you want the photographs to feel.</p></div></li>
-        <li class="reveal"><span>02</span><div><h3>Make space for real life</h3><p>We agree a natural plan, then keep the session relaxed enough for genuine moments to happen.</p></div></li>
-        <li class="reveal"><span>03</span><div><h3>Receive the story</h3><p>Your carefully edited photographs arrive in a private, beautifully presented online gallery.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Shape the plan</h3><p>I confirm availability and send a clear recommendation and written quote. There is no charge at enquiry stage.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Confirm, then enjoy it</h3><p>Your date is secured with a 30% retainer. The session stays relaxed; your edited photographs arrive in a private online gallery.</p></div></li>
       </ol>
     </section>
 
@@ -276,11 +292,12 @@
         <input class="form-trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field field--half"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
         <div class="field field--half"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="story-type">What are we photographing?</label><select id="story-type" name="story-type" required><option value="">Choose one</option><option>People or family</option><option>Event or gathering</option><option>Brand or editorial</option><option>Something else</option></select></div>
+        <div class="field"><label for="package">Which experience interests you?</label><select id="package" name="package" required><option value="">Choose one</option><option>Portrait Essential</option><option>Contextual Portrait</option><option>London Story</option><option>Personal Brand Story</option><option>Civil Ceremony</option><option>Half-Day Wedding</option><option>Bespoke / not sure yet</option></select></div>
         <div class="field"><label for="date">Preferred date <span>(if known)</span></label><input id="date" name="date" type="date"></div>
+        <div class="field"><label for="location">Location or London area <span>(if known)</span></label><input id="location" name="location" type="text" autocomplete="street-address"></div>
         <div class="field"><label for="message">Tell me about your story</label><textarea id="message" name="message" rows="4" required></textarea></div>
         <button class="submit-button" type="submit"><span>Send enquiry</span><b aria-hidden="true">↗</b></button>
-        <p class="form-note" data-form-note aria-live="polite">Your enquiry is sent directly to One Storyteller. Your details are used only to reply to your request.</p>
+        <p class="form-note" data-form-note aria-live="polite">No payment is taken here. Your enquiry is sent directly to One Storyteller and your details are used only to reply.</p>
       </form>
     </section>
   </main>
@@ -298,6 +315,6 @@
     <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Next photograph">→</button>
   </dialog>
 
-  <script src="script.js?v=20260809-2" defer></script>
+  <script src="script.js?v=20260809-4" defer></script>
 </body>
 </html>

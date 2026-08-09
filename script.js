@@ -110,7 +110,7 @@ enquiryForm.addEventListener('submit', (event) => {
     'I look forward to hearing from you.'
   ].join('\n');
   formNote.textContent = 'Your email app is opening. Please press send there to complete the enquiry.';
-  window.location.href = `mailto:hello@onestoryteller.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:mlopezprieto84@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();

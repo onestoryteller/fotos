@@ -115,8 +115,10 @@ h2 { font-size: clamp(3rem, 7vw, 7.5rem); }
 .about__copy { align-self: center; }
 .about__copy .lead { margin: 3rem 0 1.5rem; font-family: var(--serif); font-size: clamp(1.5rem, 2.5vw, 2.5rem); line-height: 1.3; }
 .about__copy > p:not(.eyebrow):not(.lead) { max-width: 34rem; color: #c7c4bc; font-size: 1rem; line-height: 1.8; }
-.credential { display: flex; align-items: center; gap: 1.2rem; margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.2); }
-.credential img { width: 9rem; height: 4.75rem; object-fit: contain; }
+.credential { display: grid; grid-template-columns: auto minmax(9rem, 1fr); align-items: center; gap: 1.4rem; margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.2); }
+.credential__marks { display: flex; align-items: center; gap: .75rem; }
+.credential__logo { width: 9rem; height: 4.75rem; object-fit: contain; }
+.credential__badge { width: 4.75rem; height: 4.75rem; object-fit: contain; }
 .credential p { margin: 0; }
 .credential strong, .credential span { display: block; }
 .credential strong { margin-bottom: .35rem; font-family: var(--serif); font-size: 1.4rem; font-weight: 400; }
@@ -265,7 +267,7 @@ h2 { font-size: clamp(3rem, 7vw, 7.5rem); }
   .about__portrait { padding-right: 8%; padding-bottom: 12%; }
   .about__portrait > img:first-child { height: 34rem; }
   .about__portrait .about__origin { width: 47%; height: 27%; }
-  .credential { align-items: flex-start; flex-direction: column; }
+  .credential { grid-template-columns: 1fr; align-items: flex-start; }
   .package-grid { grid-template-columns: 1fr; }
   .package { min-height: 20rem; }
   .pricing-guide > a { width: 100%; }

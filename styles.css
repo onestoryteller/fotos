@@ -160,7 +160,11 @@ h2 { font-size: clamp(3rem, 7vw, 7.5rem); }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--warm); }
 .submit-button { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; margin-top: .75rem; padding: 1rem 1.2rem; border: 1px solid var(--warm); color: var(--ink); background: var(--warm); cursor: pointer; transition: background .3s, color .3s; }
 .submit-button:hover { color: var(--warm); background: transparent; }
+.submit-button:disabled { cursor: wait; opacity: .65; }
+.form-trap { display: none !important; }
 .form-note { grid-column: 1 / -1; margin: -.75rem 0 0; color: #8f8d86; font-size: .7rem; line-height: 1.5; }
+.form-note.is-success { color: #b9cf9e; }
+.form-note.is-error { color: #e6a79f; }
 
 .site-footer { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 2rem; padding: 4rem var(--pad) 2rem; border-top: 1px solid rgba(255,255,255,.12); color: #d0cec8; background: #25251f; }
 .wordmark--footer { font-size: clamp(2.2rem, 5vw, 5rem); }

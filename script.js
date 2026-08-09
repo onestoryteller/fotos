@@ -91,26 +91,38 @@ lightbox.addEventListener('keydown', (event) => {
 
 const enquiryForm = document.querySelector('[data-enquiry-form]');
 const formNote = document.querySelector('[data-form-note]');
-enquiryForm.addEventListener('submit', (event) => {
+const submitButton = enquiryForm.querySelector('.submit-button');
+const submitButtonLabel = submitButton.querySelector('span');
+
+enquiryForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   if (!enquiryForm.reportValidity()) return;
+
   const data = new FormData(enquiryForm);
-  const name = data.get('name');
-  const subject = `Photography enquiry from ${name}`;
-  const body = [
-    `Hello One Storyteller,`,
-    '',
-    `My name is ${name}.`,
-    `My email is ${data.get('email')}.`,
-    `Photography type: ${data.get('story-type')}.`,
-    `Preferred date: ${data.get('date') || 'Flexible / to be discussed'}.`,
-    '',
-    data.get('message'),
-    '',
-    'I look forward to hearing from you.'
-  ].join('\n');
-  formNote.textContent = 'Your email app is opening. Please press send there to complete the enquiry.';
-  window.location.href = `mailto:onestorytellerlondon@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  formNote.classList.remove('is-success', 'is-error');
+  formNote.textContent = 'Sending your enquiry…';
+  submitButton.disabled = true;
+  submitButtonLabel.textContent = 'Sending…';
+
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/onestorytellerlondon@gmail.com', {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: data
+    });
+    const result = await response.json();
+    if (!response.ok || result.success === false || result.success === 'false') throw new Error('Submission failed');
+
+    enquiryForm.reset();
+    formNote.classList.add('is-success');
+    formNote.textContent = 'Thank you — your enquiry has been sent. I will be in touch soon.';
+  } catch (error) {
+    formNote.classList.add('is-error');
+    formNote.textContent = 'The form could not be sent. Please email onestorytellerlondon@gmail.com or use WhatsApp.';
+  } finally {
+    submitButton.disabled = false;
+    submitButtonLabel.textContent = 'Send enquiry';
+  }
 });
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();

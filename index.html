@@ -270,13 +270,17 @@
         </div>
       </div>
       <form class="enquiry-form reveal" data-enquiry-form>
+        <input type="hidden" name="_subject" value="New photography enquiry — One Storyteller">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input class="form-trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field field--half"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
         <div class="field field--half"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
         <div class="field"><label for="story-type">What are we photographing?</label><select id="story-type" name="story-type" required><option value="">Choose one</option><option>People or family</option><option>Event or gathering</option><option>Brand or editorial</option><option>Something else</option></select></div>
         <div class="field"><label for="date">Preferred date <span>(if known)</span></label><input id="date" name="date" type="date"></div>
         <div class="field"><label for="message">Tell me about your story</label><textarea id="message" name="message" rows="4" required></textarea></div>
         <button class="submit-button" type="submit"><span>Send enquiry</span><b aria-hidden="true">↗</b></button>
-        <p class="form-note" data-form-note aria-live="polite">Submitting opens your email app with a message addressed to our direct inbox, ready for you to send.</p>
+        <p class="form-note" data-form-note aria-live="polite">Your enquiry is sent directly to One Storyteller. Your details are used only to reply to your request.</p>
       </form>
     </section>
   </main>

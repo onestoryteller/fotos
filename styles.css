@@ -117,7 +117,7 @@ h2 { font-size: clamp(3rem, 7vw, 7.5rem); }
 .about__copy > p:not(.eyebrow):not(.lead) { max-width: 34rem; color: #c7c4bc; font-size: 1rem; line-height: 1.8; }
 .credential { display: grid; grid-template-columns: 1fr; align-items: start; gap: 1rem; margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.2); }
 .credential__marks { display: block; }
-.credential__combined { display: block; width: min(100%, 20rem); height: auto; object-fit: contain; }
+.credential__combined { display: block; width: min(100%, 17rem); height: auto; aspect-ratio: 613 / 139; object-fit: contain; object-position: left center; }
 .credential p { margin: 0; }
 .credential strong, .credential span { display: block; }
 .credential strong { margin-bottom: .35rem; font-family: var(--serif); font-size: 1.4rem; font-weight: 400; }

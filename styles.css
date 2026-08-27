@@ -288,7 +288,7 @@ h2 { font-size: clamp(3rem, 7vw, 7.5rem); }
   .filter { flex: 0 0 auto; }
   .gallery-card button, .gallery-card--wide button { min-height: 24rem; }
   .gallery-card--portrait button { min-height: 33rem; }
-  .manifesto__image img { aspect-ratio: 4 / 3; max-height: none; object-fit: cover; object-position: 68% center; }
+  .manifesto__image img { aspect-ratio: 4 / 3; height: auto; max-height: none; object-fit: cover; object-position: 68% center; }
   .manifesto blockquote { margin-top: 2.5rem; }
   .about__portrait { padding-right: 8%; padding-bottom: 12%; }
   .about__portrait > img:first-child { height: 34rem; }

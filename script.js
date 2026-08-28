@@ -64,6 +64,7 @@ let activeCard = null;
 const setLightboxNavigation = (visible) => {
   lightboxPrevious.hidden = !visible;
   lightboxNext.hidden = !visible;
+  lightbox.classList.toggle('lightbox--standalone', !visible);
 };
 
 const showCard = (card) => {
@@ -94,7 +95,7 @@ standaloneLightboxTriggers.forEach((trigger) => {
     activeCard = null;
     setLightboxNavigation(false);
     const source = trigger.querySelector('img');
-    lightboxImage.src = source.currentSrc || source.src;
+    lightboxImage.src = trigger.dataset.lightboxSrc || source.currentSrc || source.src;
     lightboxImage.alt = source.alt;
     lightboxCaption.textContent = trigger.closest('[data-caption]')?.dataset.caption || source.alt;
     lightbox.showModal();

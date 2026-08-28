@@ -103,6 +103,7 @@ h2 { font-size: clamp(3rem, 7vw, 7.5rem); }
 .manifesto__track { display: flex; width: max-content; margin-bottom: 2rem; font-family: var(--serif); font-size: clamp(4rem, 10vw, 10rem); line-height: 1; white-space: nowrap; animation: marquee 30s linear infinite; }
 .manifesto__track span { padding-right: .35em; }
 .manifesto__image { width: min(70rem, calc(100% - 2 * var(--pad))); margin: 0 auto; }
+.manifesto__image button { display: block; width: 100%; padding: 0; border: 0; overflow: hidden; background: transparent; cursor: zoom-in; }
 .manifesto__image img { width: 100%; max-height: 70vh; object-fit: cover; }
 .manifesto blockquote { width: min(48rem, calc(100% - 2 * var(--pad))); margin: 4rem auto 0; font-family: var(--serif); font-size: clamp(2rem, 4.2vw, 4.2rem); line-height: 1.13; text-align: center; }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -288,7 +289,8 @@ h2 { font-size: clamp(3rem, 7vw, 7.5rem); }
   .filter { flex: 0 0 auto; }
   .gallery-card button, .gallery-card--wide button { min-height: 24rem; }
   .gallery-card--portrait button { min-height: 33rem; }
-  .manifesto__image img { aspect-ratio: 4 / 3; height: auto; max-height: none; object-fit: cover; object-position: 68% center; }
+  .manifesto__image { width: 100%; }
+  .manifesto__image img { display: block; aspect-ratio: auto; height: auto; max-height: none; object-fit: contain; object-position: center; }
   .manifesto blockquote { margin-top: 2.5rem; }
   .about__portrait { padding-right: 8%; padding-bottom: 12%; }
   .about__portrait > img:first-child { height: 34rem; }

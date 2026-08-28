@@ -55,12 +55,21 @@ filters.forEach((filter) => {
 const lightbox = document.querySelector('[data-lightbox]');
 const lightboxImage = lightbox.querySelector('img');
 const lightboxCaption = lightbox.querySelector('figcaption');
+const lightboxPrevious = lightbox.querySelector('[data-lightbox-prev]');
+const lightboxNext = lightbox.querySelector('[data-lightbox-next]');
+const standaloneLightboxTriggers = [...document.querySelectorAll('[data-lightbox-trigger]')];
 const visibleCards = () => galleryCards.filter((card) => !card.classList.contains('is-filtered'));
 let activeCard = null;
+
+const setLightboxNavigation = (visible) => {
+  lightboxPrevious.hidden = !visible;
+  lightboxNext.hidden = !visible;
+};
 
 const showCard = (card) => {
   if (!card) return;
   activeCard = card;
+  setLightboxNavigation(true);
   const source = card.querySelector('img');
   lightboxImage.src = source.currentSrc || source.src;
   lightboxImage.alt = source.alt;
@@ -80,13 +89,25 @@ galleryCards.forEach((card) => {
   });
 });
 
+standaloneLightboxTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    activeCard = null;
+    setLightboxNavigation(false);
+    const source = trigger.querySelector('img');
+    lightboxImage.src = source.currentSrc || source.src;
+    lightboxImage.alt = source.alt;
+    lightboxCaption.textContent = trigger.closest('[data-caption]')?.dataset.caption || source.alt;
+    lightbox.showModal();
+  });
+});
+
 lightbox.querySelector('[data-lightbox-close]').addEventListener('click', () => lightbox.close());
-lightbox.querySelector('[data-lightbox-prev]').addEventListener('click', () => moveLightbox(-1));
-lightbox.querySelector('[data-lightbox-next]').addEventListener('click', () => moveLightbox(1));
+lightboxPrevious.addEventListener('click', () => moveLightbox(-1));
+lightboxNext.addEventListener('click', () => moveLightbox(1));
 lightbox.addEventListener('click', (event) => { if (event.target === lightbox) lightbox.close(); });
 lightbox.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowLeft') moveLightbox(-1);
-  if (event.key === 'ArrowRight') moveLightbox(1);
+  if (activeCard && event.key === 'ArrowLeft') moveLightbox(-1);
+  if (activeCard && event.key === 'ArrowRight') moveLightbox(1);
 });
 
 const enquiryForm = document.querySelector('[data-enquiry-form]');
